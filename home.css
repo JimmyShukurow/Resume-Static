@@ -101,3 +101,9 @@ body {
 .nextButton:hover {
     transform: translate(5px);
 }
+@media screen and(max-width:500px) {
+    h1 {
+        font-size: 0.2vw;
+    }
+    
+}
