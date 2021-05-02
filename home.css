@@ -105,7 +105,12 @@ h1 {
     transform: translate(5px);
 }
 @media screen and (max-width: 500px) {
-    .pageOne, .fullname {
+    .pageOne,.pageTwo,.pageThree  {
+        width: 100%;
+        background-color:rgba(22, 223, 230,1); 
+        opacity: 1;;
+    }
+    .fullname {
         width: 100%;
     }
     .pageOne, .pageTwo, .pageThree {
