@@ -4,14 +4,19 @@ body {
     font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    box-sizing: border-box;
+}
+h1 {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding: 0%;
 }
 .pageOne {
     position: absolute;
     left: 35%;
     top: 5vw;
     background-color: rgba(22, 223, 230,0.5);
-    width: 30%;
-    height: 70%;
+    width: 400px;
     box-shadow: 0 0 10px 5px rgb(250, 250, 247);
     z-index: 3;
     border-radius: 1vw;
@@ -22,7 +27,6 @@ body {
     top: 6vw;
     background-color: antiquewhite;
     width: 30%;
-    height: 70%;
     box-shadow: 0 0 10px 5px rgb(34, 233, 34);
     z-index: 2;
     opacity: 0.2;
@@ -34,7 +38,6 @@ body {
     top: 8vw;
     background-color: antiquewhite;
     width: 30%;
-    height: 70%;
     box-shadow: 0 0 10px 5px rgb(34, 160, 233);
     z-index: 1;
     opacity: 0.1;
@@ -46,45 +49,43 @@ body {
     clear: both;
 }
 .profileImage {
-    width: 10vw;
-    height: 10vw;
+    width: 150px;
+    height: 150px;
     position: absolute;
-    display: inline;
     border-radius: 50%;
-    float: right;
-    right: 1.5vw;
     box-shadow: 0 0 5px 5px grey;
+    right: 5px;
 }
 .fullname {
+    position: relative;
     display: block;
-    margin: 0.2vw 2.5vw;
+    width: 250px;
+    text-align: center;
+    padding-top: 50px;
 }
 .name  {
-    position: absolute;
-    margin-top: 2.5vw;
-    font-size: 1.4vw;
+    position: relative;
+    font-size: 20px;
     font-weight: bold;
+    display: block;
 }
 .profession  {
-    position: absolute;
-    margin: 4vw 2.5vw;
-    font-size: 1vw;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    margin-top: 20px;
+    font-size: 15px;
     font-weight: bold;
 }
 .details {
-    margin-left: 2.5vw;
     position: relative;
-    top: 7.5vw;
-    margin-top: 0.2vw;
-    font-size: 0.9vw;
+    margin-top: 50px;
+    margin-left: 25px;
+    font-size: 12px;
     font-weight: bold;
 }
 .hobbies-and-interests{
     position: relative;
-    top: 10vw;
-    margin: 0 1.5vw;
-    font-size: 1vw;
+    margin: 25px;
+    font-size: 13px;
 }
 .nextButton {
     position: absolute;
@@ -101,9 +102,27 @@ body {
 .nextButton:hover {
     transform: translate(5px);
 }
-@media screen and(max-width:500px) {
-    h1 {
-        font-size: 0.2vw;
+@media screen and (max-width: 500px) {
+    .pageOne, .fullname {
+        width: 100%;
     }
-    
+    .pageOne, .pageTwo, .pageThree {
+        position: relative;
+        display: block;
+        left: auto;
+    }
+    .nextButton {
+        display: none;
+    }
+    .profileImage {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .fullname {
+        padding-top:10px ;
+    }
+    .details {
+        margin-top: 20px ;
+    }
 }
