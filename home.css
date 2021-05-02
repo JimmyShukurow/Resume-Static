@@ -172,3 +172,31 @@ label , input#rangeSlider {
     cursor: pointer;
     border-radius: 50%;
   }
+  .modalOpener {
+      text-decoration: underline;
+      cursor: pointer;
+  }
+  .w3scholImages {
+      position: absolute;
+      display: none;
+      z-index: 9;
+      overflow-y: scroll;
+      background-color:rgba(21, 21, 22, 0.7);
+      left: 50%;
+      transform: translate(-50%);
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      height: 80%;
+  }
+  .w3scholImages>img {
+      margin-top: 25px;
+  }
+  .close {
+      font-size: 50px;
+      position: absolute;
+      right: 5px;
+      z-index: 10;
+      cursor: pointer;
+  }
+  

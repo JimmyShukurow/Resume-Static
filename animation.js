@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  // next page animation
     $(".nextButton").click(function(){
 
       $("#firstPage").animate({
@@ -29,20 +30,33 @@ $(document).ready(function(){
       $('#thirdPage').attr('id', 'secondPage');
       $('#temp').attr('id', 'thirdPage');
     });
-    function changeOpacity(){
-      var value = document.getElementById("rangeSlider").value;
-      value = value/10;
-      if (screen.width < 500){
-        var opacityOfPage = "rgba(0, 0, 0,"+value+")"
-        document.getElementById("firstPage").style.backgroundColor = opacityOfPage;
-        document.getElementById("secondPage").style.backgroundColor = opacityOfPage;
-        document.getElementById("thirdPage").style.backgroundColor = opacityOfPage;
-      }else{
-        var opacityOfPage = "rgba(22, 223, 230,"+value+")"
-        document.getElementById("firstPage").style.backgroundColor = opacityOfPage;
+    // end of next page animation
+
+
+    // changing background opacity with slider
+      function changeOpacity(){
+        var value = document.getElementById("rangeSlider").value;
+        value = value/10;
+        if (screen.width < 500){
+          var opacityOfPage = "rgba(0, 0, 0,"+value+")"
+          document.getElementById("firstPage").style.backgroundColor = opacityOfPage;
+          document.getElementById("secondPage").style.backgroundColor = opacityOfPage;
+          document.getElementById("thirdPage").style.backgroundColor = opacityOfPage;
+        }else{
+          var opacityOfPage = "rgba(22, 223, 230,"+value+")"
+          document.getElementById("firstPage").style.backgroundColor = opacityOfPage;
+        }
+      
       }
-     
-    }
-    document.getElementById("rangeSlider").addEventListener("input",changeOpacity);
+      document.getElementById("rangeSlider").addEventListener("input",changeOpacity);
+    // end of slider effect
+
+    // Modal opening and closing animation
+    $(".modalOpener").click(function(){
+      $(".w3scholImages").css("display","block");
+    })
+    $(".close").click(function(){
+      $(".w3scholImages").css("display","none");
+    })
   });
 
