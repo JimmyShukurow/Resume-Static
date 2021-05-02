@@ -12,6 +12,12 @@ h1, h4 {
     margin-bottom: 0px;
     padding: 0%;
 }
+.fixedPosition {
+    background-color: rgba(6, 6, 7, 0.7);
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+}
 label , input#rangeSlider {
     display: flex;
     justify-content: center;
