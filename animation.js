@@ -8,19 +8,19 @@ $(document).ready(function(){
       }).animate({
         left: '15%',
         opacity: '0.1',
-        top:'160px',
+        top:'20vh',
       },"slow");
 
       $("#secondPage").animate({
         left: '35%',
         opacity: '1',
-        top:'100px',
+        top:'10vh',
         zIndex: '3'
       },"slow");
       $("#thirdPage").animate({
         left: '25%',
         opacity: '0.2',
-        top:'130px',
+        top:'15vh',
         zIndex: '2'
       },"slow");
         
@@ -29,4 +29,12 @@ $(document).ready(function(){
       $('#thirdPage').attr('id', 'secondPage');
       $('#temp').attr('id', 'thirdPage');
     });
+    function changeOpacity(){
+      var value = document.getElementById("rangeSlider").value;
+      value = value/100;
+      var opacityOfPage = "rgba(22, 223, 230,"+value+");"
+      document.getElementById("firstPage").style.backgroundColor = opacityOfPage;
+    }
+    document.getElementById("rangeSlider").addEventListener("input",changeOpacity);
   });
+

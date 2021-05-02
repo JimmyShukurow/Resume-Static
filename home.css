@@ -12,10 +12,16 @@ h1, h4 {
     margin-bottom: 0px;
     padding: 0%;
 }
+label , input#rangeSlider {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+}
 .pageOne {
     position: absolute;
     left: 35%;
-    top: 5vw;
+    top: 10vh;
     background-color: rgba(22, 223, 230,0.5);
     width: 400px;
     box-shadow: 0 0 10px 5px rgb(250, 250, 247);
@@ -25,7 +31,7 @@ h1, h4 {
 .pageTwo {
     position: absolute;
     left: 25%;
-    top: 6vw;
+    top: 15vh;
     background-color: rgba(22, 223, 230,0.5);
     width: 400px;
     box-shadow: 0 0 10px 5px rgb(34, 233, 34);
@@ -36,7 +42,7 @@ h1, h4 {
 .pageThree {
     position: absolute;
     left: 15%;
-    top: 8vw;
+    top: 20vh;
     background-color: rgba(22, 223, 230,0.5);
     width: 400px;
     box-shadow: 0 0 10px 5px rgb(34, 160, 233);
