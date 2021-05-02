@@ -31,7 +31,7 @@ $(document).ready(function(){
     });
     function changeOpacity(){
       var value = document.getElementById("rangeSlider").value;
-      value = value/100;
+      value = value/10;
       if (screen.width < 500){
         var opacityOfPage = "rgba(0, 0, 0,"+value+")"
         document.getElementById("firstPage").style.backgroundColor = opacityOfPage;
