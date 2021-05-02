@@ -25,23 +25,25 @@ h1 {
     position: absolute;
     left: 25%;
     top: 6vw;
-    background-color: antiquewhite;
-    width: 30%;
+    background-color: rgba(22, 223, 230,0.5);
+    width: 360px;
     box-shadow: 0 0 10px 5px rgb(34, 233, 34);
     z-index: 2;
     opacity: 0.2;
     border-radius: 1vw;
+    padding: 5px 20px 20px 20px;
 }
 .pageThree {
     position: absolute;
     left: 15%;
     top: 8vw;
-    background-color: antiquewhite;
-    width: 30%;
+    background-color: rgba(22, 223, 230,0.5);
+    width: 360px;
     box-shadow: 0 0 10px 5px rgb(34, 160, 233);
     z-index: 1;
     opacity: 0.1;
     border-radius: 1vw;
+    padding: 5px 20px 20px 20px;
 }
 .center {
     display: flex;
