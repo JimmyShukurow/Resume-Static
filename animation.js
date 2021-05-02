@@ -32,8 +32,16 @@ $(document).ready(function(){
     function changeOpacity(){
       var value = document.getElementById("rangeSlider").value;
       value = value/100;
-      var opacityOfPage = "rgba(22, 223, 230,"+value+")"
-      document.getElementById("firstPage").style.backgroundColor = opacityOfPage;
+      if (screen.width < 500){
+        var opacityOfPage = "rgba(0, 0, 0,"+value+")"
+        document.getElementById("firstPage").style.backgroundColor = opacityOfPage;
+        document.getElementById("secondPage").style.backgroundColor = opacityOfPage;
+        document.getElementById("thirdPage").style.backgroundColor = opacityOfPage;
+      }else{
+        var opacityOfPage = "rgba(22, 223, 230,"+value+")"
+        document.getElementById("firstPage").style.backgroundColor = opacityOfPage;
+      }
+     
     }
     document.getElementById("rangeSlider").addEventListener("input",changeOpacity);
   });
