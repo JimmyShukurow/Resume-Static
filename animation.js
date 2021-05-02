@@ -32,7 +32,7 @@ $(document).ready(function(){
     function changeOpacity(){
       var value = document.getElementById("rangeSlider").value;
       value = value/100;
-      var opacityOfPage = "rgba(22, 223, 230,"+value+");"
+      var opacityOfPage = "rgba(22, 223, 230,"+value+")"
       document.getElementById("firstPage").style.backgroundColor = opacityOfPage;
     }
     document.getElementById("rangeSlider").addEventListener("input",changeOpacity);
