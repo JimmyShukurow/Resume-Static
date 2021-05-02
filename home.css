@@ -7,7 +7,7 @@ body {
     box-sizing: border-box;
     overflow-y: hidden;
 }
-h1 {
+h1, h4 {
     margin-top: 5px;
     margin-bottom: 0px;
     padding: 0%;
@@ -27,24 +27,22 @@ h1 {
     left: 25%;
     top: 6vw;
     background-color: rgba(22, 223, 230,0.5);
-    width: 360px;
+    width: 400px;
     box-shadow: 0 0 10px 5px rgb(34, 233, 34);
     z-index: 2;
     opacity: 0.2;
     border-radius: 1vw;
-    padding: 5px 20px 20px 20px;
 }
 .pageThree {
     position: absolute;
     left: 15%;
     top: 8vw;
     background-color: rgba(22, 223, 230,0.5);
-    width: 360px;
+    width: 400px;
     box-shadow: 0 0 10px 5px rgb(34, 160, 233);
     z-index: 1;
     opacity: 0.1;
     border-radius: 1vw;
-    padding: 5px 20px 20px 20px;
 }
 .center {
     display: flex;
@@ -52,8 +50,8 @@ h1 {
     clear: both;
 }
 .profileImage {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     position: absolute;
     border-radius: 50%;
     box-shadow: 0 0 5px 5px grey;
@@ -80,12 +78,10 @@ h1 {
 .details {
     position: relative;
     margin-top: 50px;
-    margin-left: 25px;
     font-weight: bold;
 }
 .hobbies-and-interests{
     position: relative;
-    margin: 25px;
 }
 .nextButton {
     position: absolute;
@@ -101,6 +97,9 @@ h1 {
 }
 .nextButton:hover {
     transform: translate(5px);
+}
+.details, .hobbies-and-interests, .university, .school, .languages, .codingLanguages,.frameworks {
+    margin: 25px;
 }
 @media screen and (max-width: 500px) {
     body {
