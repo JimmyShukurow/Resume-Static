@@ -7,9 +7,9 @@ $(document).ready(function(){
       }).animate({
         zIndex: '1',
       }).animate({
-        left: '15%',
+        left: '5%',
         opacity: '0.1',
-        top:'20vh',
+        top:'25vh',
       },"slow");
 
       $("#secondPage").animate({
@@ -20,15 +20,22 @@ $(document).ready(function(){
       },"slow");
       $("#thirdPage").animate({
         left: '25%',
-        opacity: '0.2',
+        opacity: '0.3',
         top:'15vh',
+        zIndex: '2'
+      },"slow");
+      $("#fourthPage").animate({
+        left: '15%',
+        opacity: '0.2',
+        top:'20vh',
         zIndex: '2'
       },"slow");
         
       $('#firstPage').attr('id', 'temp');
       $('#secondPage').attr('id', 'firstPage');
       $('#thirdPage').attr('id', 'secondPage');
-      $('#temp').attr('id', 'thirdPage');
+      $('#fourthPage').attr('id', 'thirdPage');
+      $('#temp').attr('id', 'fourthPage');
     });
     // end of next page animation
 
@@ -37,16 +44,11 @@ $(document).ready(function(){
       function changeOpacity(){
         var value = document.getElementById("rangeSlider").value;
         value = value/10;
-        if (screen.width < 500){
           var opacityOfPage = "rgba(0, 0, 0,"+value+")"
           document.getElementById("firstPage").style.backgroundColor = opacityOfPage;
           document.getElementById("secondPage").style.backgroundColor = opacityOfPage;
           document.getElementById("thirdPage").style.backgroundColor = opacityOfPage;
-        }else{
-          var opacityOfPage = "rgba(22, 223, 230,"+value+")"
-          document.getElementById("firstPage").style.backgroundColor = opacityOfPage;
-        }
-      
+          document.getElementById("fourthPage").style.backgroundColor = opacityOfPage;
       }
       document.getElementById("rangeSlider").addEventListener("input",changeOpacity);
     // end of slider effect

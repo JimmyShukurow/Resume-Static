@@ -7,13 +7,16 @@ body {
     box-sizing: border-box;
     overflow-y: hidden;
 }
+a {
+    text-decoration: underline;
+    color: rgb(34, 193, 233);
+}
 h1, h4 {
     margin-top: 5px;
     margin-bottom: 0px;
     padding: 0%;
 }
 .fixedPosition {
-    background-color: rgba(6, 6, 7, 0.7);
     width: 100%;
     position: fixed;
     z-index: 5;
@@ -28,7 +31,7 @@ label , input#rangeSlider {
     position: absolute;
     left: 35%;
     top: 10vh;
-    background-color: rgba(22, 223, 230,0.5);
+    background-color: rgba(0, 0, 0,0.5);
     width: 400px;
     box-shadow: 0 0 10px 5px rgb(250, 250, 247);
     z-index: 3;
@@ -38,21 +41,32 @@ label , input#rangeSlider {
     position: absolute;
     left: 25%;
     top: 15vh;
-    background-color: rgba(22, 223, 230,0.5);
+    background-color: rgba(0, 0, 0,0.5);
     width: 400px;
     box-shadow: 0 0 10px 5px rgb(34, 233, 34);
     z-index: 2;
-    opacity: 0.2;
+    opacity: 0.3;
     border-radius: 1vw;
 }
 .pageThree {
     position: absolute;
     left: 15%;
     top: 20vh;
-    background-color: rgba(22, 223, 230,0.5);
+    background-color: rgba(0, 0, 0,0.5);
     width: 400px;
     box-shadow: 0 0 10px 5px rgb(34, 160, 233);
     z-index: 1;
+    opacity: 0.2;
+    border-radius: 1vw;
+}
+.pageFour {
+    position: absolute;
+    left: 5%;
+    top: 25vh;
+    background-color: rgba(0, 0, 0,0.5);
+    width: 400px;
+    box-shadow: 0 0 10px 5px rgb(233, 34, 34);
+    z-index: 0;
     opacity: 0.1;
     border-radius: 1vw;
 }
@@ -110,39 +124,9 @@ label , input#rangeSlider {
 .nextButton:hover {
     transform: translate(5px);
 }
-.details, .hobbies-and-interests, .university, .school, .languages, .codingLanguages,.frameworks {
+.details, .hobbies-and-interests, .university, 
+.school, .languages, .codingLanguages,.frameworks, .myWorks,.references {
     margin: 25px;
-}
-@media screen and (max-width: 500px) {
-    body {
-        overflow-y: scroll;
-    }
-    .pageOne,.pageTwo,.pageThree  {
-        width: 100%;
-        opacity: 1;;
-    }
-    .fullname {
-        width: 100%;
-    }
-    .pageOne, .pageTwo, .pageThree {
-        position: relative;
-        display: block;
-        left: auto;
-    }
-    .nextButton {
-        display: none;
-    }
-    .profileImage {
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-    }
-    .fullname {
-        padding-top:10px ;
-    }
-    .details {
-        margin-top: 20px ;
-    }
 }
 
 .slider {
@@ -177,8 +161,10 @@ label , input#rangeSlider {
       cursor: pointer;
   }
   .w3scholImages {
-      position: absolute;
+      position: fixed;
       display: none;
+      left: 0;
+      top: 0;
       z-index: 9;
       overflow-y: scroll;
       background-color:rgba(21, 21, 22, 0.7);
@@ -190,13 +176,51 @@ label , input#rangeSlider {
       height: 80%;
   }
   .w3scholImages>img {
-      margin-top: 25px;
+      margin-top: 10px;
   }
   .close {
       font-size: 50px;
-      position: absolute;
-      right: 5px;
+      position: sticky;
+      top: 10px;
+      right: 15px;
+      float: right;
       z-index: 10;
       cursor: pointer;
   }
-  
+  @media screen and (max-width: 500px) {
+    body {
+        overflow-y: scroll;
+    }
+    .pageOne,.pageTwo,.pageThree, .pageFour  {
+        width: 100%;
+        opacity: 1;
+        position: relative;
+        display: block;
+        left: auto;
+        padding-bottom: 5px;
+    }
+    .fullname {
+        width: 100%;
+    }
+    .nextButton {
+        display: none;
+    }
+    .profileImage {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .fullname {
+        padding-top:10px ;
+    }
+    .details {
+        margin-top: 20px ;
+    }
+    .w3scholImages {
+        width: 100%;
+        height: auto;
+    }
+    .w3scholImages>img {
+        margin-top: 5px;
+    }
+}
